@@ -12,16 +12,28 @@
 #    Object Properties
 #################################################################
 
-###  https://purl.org/net/opt_benchmark#has_constraints
-:has_constraints rdf:type owl:ObjectProperty ;
-                 rdfs:domain :opt_problem ;
-                 rdfs:range :opt_constraints .
+###  https://purl.org/net/opt_benchmark#has_constraint
+:has_constraint rdf:type owl:ObjectProperty ;
+                rdfs:domain :opt_constraints ;
+                rdfs:range :opt_constraint .
+
+
+###  https://purl.org/net/opt_benchmark#has_function
+:has_function rdf:type owl:ObjectProperty ;
+              rdfs:domain :opt_objective ;
+              rdfs:range :function .
 
 
 ###  https://purl.org/net/opt_benchmark#has_objective
 :has_objective rdf:type owl:ObjectProperty ;
                rdfs:domain :opt_problem ;
                rdfs:range :opt_objective .
+
+
+###  https://purl.org/net/opt_benchmark#has_variables
+:has_variables rdf:type owl:ObjectProperty ;
+               rdfs:domain :opt_constraint ,
+                           :opt_objective .
 
 
 #################################################################
@@ -68,6 +80,10 @@
 ###  https://purl.org/net/opt_benchmark#nonlinear
 :nonlinear rdf:type owl:Class ;
            rdfs:subClassOf :function .
+
+
+###  https://purl.org/net/opt_benchmark#opt_constraint
+:opt_constraint rdf:type owl:Class .
 
 
 ###  https://purl.org/net/opt_benchmark#opt_constraints

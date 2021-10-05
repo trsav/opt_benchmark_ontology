@@ -3,11 +3,11 @@ Options -MultiViews
 
 # Directive to ensure *.rdf files served as appropriate content type,
 # if not present in main apache config
-AddType application/rdf+xml .rdf
 AddType application/rdf+xml .owl
 
 # Rewrite engine setup
 RewriteEngine On
+RewriteBase /
 
 # Rewrite rule to serve HTML content from the vocabulary URI if requested
 RewriteCond %{HTTP_ACCEPT} !application/rdf\+xml.*(text/html|application/xhtml\+xml)

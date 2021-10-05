@@ -5,4 +5,4 @@
 # Optimisation Benchmark Ontology
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
-Ontology URI: ```https://purl.org/net/opt_benchmark#```
+Ontology IRI: ```https://purl.org/net/opt_benchmark```

@@ -9,8 +9,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://purl.org/net/opt_benchmark">
         <dc:contributor>Ehecatl Antonio Del Rio Chanona</dc:contributor>
+        <dc:contributor>Tom Savage</dc:contributor>
         <dc:creator>Tom Savage</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-14T12:00:00</dc:date>
+        <dc:date>14-10-2021</dc:date>
         <dc:description>An ontology to represent optimization problems, solvers, and their solutions.</dc:description>
         <dc:title>Optimization Benchmark Ontology</dc:title>
     </owl:Ontology>
@@ -69,20 +70,20 @@
     
 
 
-    <!-- https://purl.org/net/opt_benchmark#hasConstraints -->
-
-    <owl:ObjectProperty rdf:about="https://purl.org/net/opt_benchmark#hasConstraints">
-        <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#opt_problem"/>
-        <rdfs:range rdf:resource="https://purl.org/net/opt_benchmark#opt_constraints"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://purl.org/net/opt_benchmark#has_constraint -->
 
     <owl:ObjectProperty rdf:about="https://purl.org/net/opt_benchmark#has_constraint">
         <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#opt_constraints"/>
         <rdfs:range rdf:resource="https://purl.org/net/opt_benchmark#opt_constraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#has_constraints -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/net/opt_benchmark#has_constraints">
+        <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#opt_problem"/>
+        <rdfs:range rdf:resource="https://purl.org/net/opt_benchmark#opt_constraints"/>
     </owl:ObjectProperty>
     
 
@@ -136,15 +137,6 @@
     
 
 
-    <!-- https://purl.org/net/opt_benchmark#derivatives_available -->
-
-    <owl:DatatypeProperty rdf:about="https://purl.org/net/opt_benchmark#derivatives_available">
-        <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#opt_problem"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://purl.org/net/opt_benchmark#discrete_variables -->
 
     <owl:DatatypeProperty rdf:about="https://purl.org/net/opt_benchmark#discrete_variables">
@@ -154,9 +146,18 @@
     
 
 
-    <!-- https://purl.org/net/opt_benchmark#has_order -->
+    <!-- https://purl.org/net/opt_benchmark#has_momentum -->
 
-    <owl:DatatypeProperty rdf:about="https://purl.org/net/opt_benchmark#has_order">
+    <owl:DatatypeProperty rdf:about="https://purl.org/net/opt_benchmark#has_momentum">
+        <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#first_order"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#has_polynomial_order -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/net/opt_benchmark#has_polynomial_order">
         <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#polynomial"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -183,6 +184,22 @@
     
 
 
+    <!-- https://purl.org/net/opt_benchmark#direct -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#direct">
+        <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#zero_order"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#first_order -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#first_order">
+        <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#opt_solver"/>
+    </owl:Class>
+    
+
+
     <!-- https://purl.org/net/opt_benchmark#function -->
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#function"/>
@@ -193,6 +210,14 @@
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#linear">
         <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#function"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#model_based -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#model_based">
+        <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#zero_order"/>
     </owl:Class>
     
 
@@ -251,6 +276,22 @@
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#polynomial">
         <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#nonlinear"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#second_order -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#second_order">
+        <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#opt_solver"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#zero_order -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#zero_order">
+        <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#opt_solver"/>
     </owl:Class>
 </rdf:RDF>
 

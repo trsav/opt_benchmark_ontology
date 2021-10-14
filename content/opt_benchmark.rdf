@@ -192,6 +192,14 @@
     
 
 
+    <!-- https://purl.org/net/opt_benchmark#equality_constraint -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#equality_constraint">
+        <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#opt_constraint"/>
+    </owl:Class>
+    
+
+
     <!-- https://purl.org/net/opt_benchmark#first_order -->
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#first_order">
@@ -203,6 +211,14 @@
     <!-- https://purl.org/net/opt_benchmark#function -->
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#function"/>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#inequality_constraint -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#inequality_constraint">
+        <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#opt_constraint"/>
+    </owl:Class>
     
 
 

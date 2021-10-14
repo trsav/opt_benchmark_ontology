@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://purl.org/net/opt_benchmark#"
+     xml:base="https://purl.org/net/opt_benchmark"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://purl.org/net/opt_benchmark"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#has_constraint -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/net/opt_benchmark#has_constraint">
+        <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#opt_constraints"/>
+        <rdfs:range rdf:resource="https://purl.org/net/opt_benchmark#opt_constraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#has_function -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/net/opt_benchmark#has_function">
+        <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#opt_objective"/>
+        <rdfs:range rdf:resource="https://purl.org/net/opt_benchmark#function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#has_objective -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/net/opt_benchmark#has_objective">
+        <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#opt_problem"/>
+        <rdfs:range rdf:resource="https://purl.org/net/opt_benchmark#opt_objective"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#has_variables -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/net/opt_benchmark#has_variables">
+        <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#opt_constraint"/>
+        <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#opt_objective"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#continuous_variables -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/net/opt_benchmark#continuous_variables">
+        <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#opt_variables"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#derivatives_available -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/net/opt_benchmark#derivatives_available">
+        <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#opt_problem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#discrete_variables -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/net/opt_benchmark#discrete_variables">
+        <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#opt_variables"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#number_of_constraints -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/net/opt_benchmark#number_of_constraints">
+        <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#opt_constraints"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#function -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#function"/>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#linear -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#linear">
+        <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#function"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#nonlinear -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#nonlinear">
+        <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#function"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#opt_constraint -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_constraint"/>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#opt_constraints -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_constraints"/>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#opt_objective -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_objective"/>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#opt_problem -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_problem"/>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#opt_solution -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_solution"/>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#opt_solver -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_solver"/>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#opt_variables -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_variables"/>
+    
+
+
+    <!-- https://purl.org/net/opt_benchmark#quadratic -->
+
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#quadratic">
+        <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#nonlinear"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

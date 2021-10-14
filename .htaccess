@@ -3,7 +3,7 @@ Options -MultiViews
 
 # Directive to ensure *.rdf files served as appropriate content type,
 # if not present in main apache config
-AddType application/rdf+xml .owl
+AddType application/rdf+xml .rdf
 
 # Rewrite engine setup
 RewriteEngine On
@@ -17,4 +17,4 @@ RewriteCond %{HTTP_USER_AGENT} ^Mozilla/.*
 RewriteRule ^opt_benchmark$ content/index.html [R=303]
 
 # Rewrite rule to make sure we serve the RDF/XML content from the namespace URI by default
-RewriteRule ^opt_benchmark$ content/opt_benchmark.owl [R=303]
+RewriteRule ^opt_benchmark$ content/opt_benchmark.rdf [R=303]

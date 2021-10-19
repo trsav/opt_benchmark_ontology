@@ -21,7 +21,7 @@
         jQuery(".markdown").each(function(el) {
             jQuery(this).after(marked(jQuery(this).text())).remove()
         });
-        var list = $('a[name="http://ec2-18-170-159-0.eu-west-2.compute.amazonaws.com/content/opt_benchmark.rdf"]');
+        var list = $('a[name="http://purl.org/net/opt_benchmark"]');
         if (list.size() != 0) {
             var element = list.first();
             $.scrollTo(element);

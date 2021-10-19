@@ -242,6 +242,7 @@
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#direct">
         <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#zero_order"/>
+        <rdfs:comment>Direct zero-order methods use direct function evaluations to decide where to move</rdfs:comment>
     </owl:Class>
     
 
@@ -250,6 +251,7 @@
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#equality_constraint">
         <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#opt_constraint"/>
+        <rdfs:comment>Represents an equality constraint</rdfs:comment>
     </owl:Class>
     
 
@@ -258,6 +260,7 @@
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#first_order">
         <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#opt_solver"/>
+        <rdfs:comment>First order methods apply only the gradient of a function (i.e. the first derivative)</rdfs:comment>
     </owl:Class>
     
 
@@ -272,6 +275,7 @@
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#inequality_constraint">
         <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#opt_constraint"/>
+        <rdfs:comment>Represents an inequality constraint</rdfs:comment>
     </owl:Class>
     
 
@@ -280,6 +284,7 @@
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#linear">
         <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#function"/>
+        <rdfs:comment>Represents a linear function.</rdfs:comment>
     </owl:Class>
     
 
@@ -288,6 +293,7 @@
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#model_based">
         <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#zero_order"/>
+        <rdfs:comment>Model based zero-order optimization methods produce a surrogate, often quadratic, of a function, which at each iteration is optimized.</rdfs:comment>
     </owl:Class>
     
 
@@ -296,62 +302,80 @@
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#nonlinear">
         <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#function"/>
+        <rdfs:comment>Represents a nonlinear function.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- https://purl.org/net/opt_benchmark#opt_benchmark -->
 
-    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_benchmark"/>
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_benchmark">
+        <rdfs:comment>Represents the combination of an optimization solver, an associated problem, and an associated solution.</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- https://purl.org/net/opt_benchmark#opt_constraint -->
 
-    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_constraint"/>
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_constraint">
+        <rdfs:comment>Represents a constraint within the set of constraints associated to an optimization problem.</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- https://purl.org/net/opt_benchmark#opt_constraints -->
 
-    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_constraints"/>
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_constraints">
+        <rdfs:comment>Represents the set of contraints associated to an optimization problem or mathematical program.</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- https://purl.org/net/opt_benchmark#opt_objective -->
 
-    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_objective"/>
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_objective">
+        <rdfs:comment>The objective function (i.e. function to be optimized) of an optimization problem</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- https://purl.org/net/opt_benchmark#opt_problem -->
 
-    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_problem"/>
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_problem">
+        <rdfs:comment>I.e. a mathematical program.</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- https://purl.org/net/opt_benchmark#opt_solution -->
 
-    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_solution"/>
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_solution">
+        <rdfs:comment>Represents the solution that results when an optimization solver is applied to an optimization problem.</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- https://purl.org/net/opt_benchmark#opt_solver -->
 
-    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_solver"/>
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_solver">
+        <rdfs:comment>Represents a solver that solves a mathematical program/optimization problem.</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- https://purl.org/net/opt_benchmark#opt_variables -->
 
-    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_variables"/>
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#opt_variables">
+        <rdfs:comment>Represents the set of variables that a function applies</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- https://purl.org/net/opt_benchmark#polynomial -->
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#polynomial">
-        <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#nonlinear"/>
+        <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#function"/>
+        <rdfs:comment>Represents a polynomial function which has a respective degree.</rdfs:comment>
     </owl:Class>
     
 
@@ -360,13 +384,16 @@
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#second_order">
         <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#opt_solver"/>
+        <rdfs:comment>Second order methods construct a Hessian matrix, or approximation thereof, to guide the next sample.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- https://purl.org/net/opt_benchmark#solution_checkpoint -->
 
-    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#solution_checkpoint"/>
+    <owl:Class rdf:about="https://purl.org/net/opt_benchmark#solution_checkpoint">
+        <rdfs:comment>Represents the solution at a particular instance within an optimization problem&apos;s solution, in this case, at a specific iterations</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -374,6 +401,7 @@
 
     <owl:Class rdf:about="https://purl.org/net/opt_benchmark#zero_order">
         <rdfs:subClassOf rdf:resource="https://purl.org/net/opt_benchmark#opt_solver"/>
+        <rdfs:comment>Zero-order methods do not rely on the use of gradients</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
 

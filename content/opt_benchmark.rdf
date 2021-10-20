@@ -115,6 +115,17 @@
     
 
 
+    <!-- https://purl.org/net/opt_benchmark#has_model -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/net/opt_benchmark#has_model">
+        <rdfs:domain rdf:resource="https://purl.org/net/opt_benchmark#model_based"/>
+        <rdfs:range rdf:resource="https://purl.org/net/opt_benchmark#function"/>
+        <rdfs:comment>Defines the link between a model-based zero-order optimization method, and the functional form of the model it applies.</rdfs:comment>
+        <rdfs:label>Has Model</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://purl.org/net/opt_benchmark#has_objective -->
 
     <owl:ObjectProperty rdf:about="https://purl.org/net/opt_benchmark#has_objective">

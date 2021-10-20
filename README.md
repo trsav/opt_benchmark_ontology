@@ -6,3 +6,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 Ontology IRI: ```https://purl.org/net/opt_benchmark```
+
+This repository contains code for the optimization benchmark ontology as well as documentation. 
+Depending on the HTTP request header, different content is provided. This repository is cloned within ```/var/www/html/``` of an apache web-server hosted on an AWS EC2 instance.
